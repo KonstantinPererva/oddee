@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function(){ // Создаем таск Sass
-    return gulp.src('app/scss/slider.scss') // Берем источник
+    return gulp.src('app/style.scss') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css

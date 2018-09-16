@@ -1,0 +1,85 @@
+.button {
+
+  &-field {
+    padding: 150px 0 0;
+
+    @media (max-width: 1440px) {
+      padding: 70px 0 0;
+    }
+  }
+
+  &-send-brief {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 62px;
+    text-align: center;
+    text-decoration: none;
+
+    @media (min-width: 1260px) {
+      cursor: pointer;
+    }
+
+    &:hover {
+
+      & .button-send-brief__substrate {
+        width: 100%;
+      }
+
+      & .button-send-brief__ico {
+        stroke-dasharray: 3px;
+        stroke: #000;
+        animation: dash .2s linear infinite;
+      }
+    }
+
+    &__text {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 28px;
+      font-family: $ff-PNBlack;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0 20px 0 0;
+    }
+
+    &__ico-wrap {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &__ico {
+      position: relative;
+      fill: #fff;
+      stroke: #fff;
+      stroke-dasharray: 0px;
+      stroke-width: 1.5;
+    }
+
+    &__substrate {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 75%;
+      height: 100%;
+      background: #000;
+      z-index: 0;
+      transition: .25s;
+    }
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}

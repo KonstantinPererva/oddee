@@ -1,0 +1,58 @@
+.logo {
+
+  &__text {
+    display: block;
+    font-size: 220px;
+    text-transform: uppercase;
+    line-height: 120px;
+
+    @media (max-width: 1440px) {
+      font-size: 130px;
+    }
+
+    &_white {
+      color: #fff;
+      font-family: $ff-PNBold;
+    }
+
+    &_black {
+      color: #000;
+      font-family: $ff-PNBlack;
+    }
+  }
+
+  &__descriptor {
+    font-size: 48px;
+    font-family: $ff-PNBold;
+    color: #fff;
+    text-transform: uppercase;
+
+    @media (max-width: 1440px) {
+      font-size: 26px;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    transform: rotate(-3deg);
+
+    &_center {
+      left: 0;
+    }
+
+    &_left {
+      right: 120%;
+    }
+
+    &_right {
+      left: 120%;
+    }
+  }
+
+  &__hold {
+    position: relative;
+    z-index: 1;
+  }
+}
