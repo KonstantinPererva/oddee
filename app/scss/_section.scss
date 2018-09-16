@@ -5,24 +5,28 @@
   &_1 {
     display: flex;
     background: $color-main;
-    z-index: 1;
+    z-index: 5;
   }
 
   &_2 {
     display: flex;
     background: #fff;
+    z-index: 4;
   }
 
   &_3 {
-    background: #ccc;
+    background: #fff;
+    z-index: 3;
   }
 
   &_4 {
-    background: #000;
+    background: #fff;
+    z-index: 1;
   }
 
   &_5 {
-    background: #951;
+    background: #fff;
+    z-index: 2;
   }
 
   &__substrate {
@@ -50,33 +54,70 @@
   }
 
   &__hold {
+    position: relative;
     width: 977px;
     margin: auto;
-  }
+    outline: 1px solid red;
 
-  &__title {
-
+    @media (max-width: 1440px) {
+      width: 550px;
+    }
   }
 
   &-title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0 40px;
 
-  }
+    &_right {
+      justify-content: flex-end;
 
-  &__descr {
+      & .section-title__ico {
+        margin-right: 55px;
+      }
+    }
 
-  }
+    &_left {
 
-  &-descr {
+      & .section-title__ico {
+        margin-left: 55px;
+      }
+    }
+
+    &__text-wrap {
+      display: block;
+      position: relative;
+    }
 
     &__text {
+      position: relative;
+      display: block;
+      color: #000;
+      font-size: 60px;
+      text-transform: uppercase;
+      font-family: $ff-MEBold;
+      z-index: 1;
+    }
 
-      &_blue {
+    &__shadow {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $color-main;
+      font-size: 60px;
+      text-transform: uppercase;
+      font-family: $ff-MEBold;
+      z-index: 0;
+      transform: rotate(-3deg);
+    }
 
-      }
-
-      &_black {
-
-      }
+    &__ico {
+      display: block;
+      width: 320px;
+      height: 3px;
+      background: $color-main;
     }
   }
 }

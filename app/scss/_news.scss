@@ -1,0 +1,139 @@
+.news {
+
+  &-wrapper {
+    position: relative;
+    //width: 550px;
+    width: 70vmin;
+    margin: 0 auto;
+
+  }
+
+  &-list {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      width: 33.33%;
+    }
+  }
+
+  &-slide {
+
+    &:hover {
+
+      & .news-slide__substrate {
+        background: rgba(32,79,255,.78);
+      }
+
+      & .news-slide__title {
+        transform: translate(-50%,-150%);
+      }
+
+      & .news-button-view {
+        opacity: 1;
+      }
+    }
+
+    &__title {
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: 50%;
+      z-index: 2;
+      transition: .2s;
+    }
+
+    &-title {
+      text-align: center;
+
+      &__text {
+        font-size: 25px;
+        color: #fff;
+        font-family: $ff-MBold;
+
+        @media (max-width: 1440px) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__substrate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0,0,0,.8);
+      z-index: 1;
+      transition: .2s;
+    }
+
+    &__img-wrap {
+      position: relative;
+      z-index: 0;
+    }
+
+    &__img {
+      width: 100%;
+      display: block;
+    }
+
+    &__button {
+      display: block;
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      margin: auto;
+
+      @media (max-width: 1440px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &-button-view {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .2s;
+
+    @media (min-width: 1260px) {
+      cursor: pointer;
+    }
+
+    &__text {
+      display: block;
+      text-transform: lowercase;
+      color: #fff;
+      font-family: $ff-MBold;
+      font-size: 25px;
+      margin: auto;
+
+      @media (max-width: 1440px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.lightning {
+  position: absolute;
+  left: 71%;
+  top: 0;
+  width: 68vmin;
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+}

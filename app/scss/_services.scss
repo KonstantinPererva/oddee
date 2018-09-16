@@ -1,3 +1,59 @@
 .services {
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    flex-shrink: 0;
+  }
+
+  &-title {
+
+    &__text-wrap {
+
+    }
+
+    &__text {
+      fill: $color-main;
+      height: auto;
+
+      @media (max-width: 1440px) {
+        width: 50px;
+      }
+    }
+  }
+
+  &__descr {
+    flex-shrink: 0;
+  }
+
+  &-descr {
+    transform: rotate(-8deg);
+
+    &__text {
+      display: block;
+      text-align: right;
+      font-family: $ff-MEBold;
+      font-size: 80px;
+      text-transform: uppercase;
+      font-style: italic;
+
+      @media (max-width: 1440px) {
+        font-size: 40px;
+      }
+
+      &_black {
+        color: #000;
+      }
+
+      &_blue {
+        color: $color-main;
+      }
+    }
+
+    &__text + span {
+      position: relative;
+      left: -5px;
+    }
+  }
 }

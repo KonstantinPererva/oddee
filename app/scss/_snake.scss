@@ -1,0 +1,24 @@
+.snake {
+  display: block;
+  width: 800px;
+  height: 100vh;
+  position: absolute;
+
+  &_left {
+    top: 180px;
+    right: 83%;
+
+    @media (max-width: 1440px) {
+      top: 74px;
+    }
+  }
+
+  &_right {
+    top: -40px;
+    left: 100%;
+  }
+
+  &__img  {
+    width: 100%;
+  }
+}
