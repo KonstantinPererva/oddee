@@ -124,6 +124,25 @@
       }
     }
   }
+
+  &-navigation {
+
+    &__link {
+      text-align: center;
+    }
+
+    &-link {
+      display: inline-block;
+      vertical-align: top;
+      text-decoration: none;
+
+      &__text {
+        font-size: 18px;
+        font-family: $ff-MBold;
+        color: $color-main;
+      }
+    }
+  }
 }
 
 .lightning {

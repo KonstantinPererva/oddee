@@ -1,3 +1,29 @@
+/*Proxima*/
+@font-face {
+  font-family: 'Proxima Nova Bl';
+  src: url("../fonts/proxima/subset-ProximaNova-Black.woff2") format("woff2"), url("../fonts/proxima/subset-ProximaNova-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url("../fonts/proxima/subset-ProximaNova-Bold.woff2") format("woff2"), url("../fonts/proxima/subset-ProximaNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+/*Montserrat*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/montserat/subset-Montserrat-Bold.woff2") format("woff2"), url("../fonts/montserat/subset-Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/montserat/subset-Montserrat-Regular.woff2") format("woff2"), url("../fonts/montserat/subset-Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*variable*/
 body {
   margin: 0;
@@ -15,7 +41,11 @@ body {
 
 .section {
   height: inherit;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
   .section_1 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -37,7 +67,7 @@ body {
     background: #fff;
     z-index: 1; }
   .section_5 {
-    background: #fff;
+    background: #204fff;
     z-index: 2; }
   .section__substrate {
     position: absolute;
@@ -53,6 +83,9 @@ body {
     background: url(../images/bg/greed-lg.png) no-repeat center bottom;
     -webkit-background-size: cover;
             background-size: cover; }
+  .section__block {
+    width: 100%;
+    height: 100%; }
   .section__inner {
     position: relative;
     margin: auto;
@@ -61,8 +94,9 @@ body {
   .section__hold {
     position: relative;
     width: 977px;
-    margin: auto;
-    outline: 1px solid red; }
+    margin: auto; }
+    .section__hold_contacts {
+      height: 50%; }
     @media (max-width: 1440px) {
       .section__hold {
         width: 550px; } }
@@ -95,8 +129,11 @@ body {
       color: #000;
       font-size: 60px;
       text-transform: uppercase;
-      font-family: sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
       z-index: 1; }
+      .section-title__text_white {
+        color: #fff; }
     .section-title__shadow {
       display: block;
       position: absolute;
@@ -105,16 +142,24 @@ body {
       color: #204fff;
       font-size: 60px;
       text-transform: uppercase;
-      font-family: sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
       z-index: 0;
       -webkit-transform: rotate(-3deg);
           -ms-transform: rotate(-3deg);
               transform: rotate(-3deg); }
+      .section-title__shadow_black {
+        color: #000; }
     .section-title__ico {
       display: block;
       width: 320px;
       height: 3px;
       background: #204fff; }
+      @media screen and (max-width: 1440px) {
+        .section-title__ico {
+          width: 222px; } }
+      .section-title__ico_white {
+        background: #fff; }
 
 .logo__text {
   display: block;
@@ -126,14 +171,17 @@ body {
       font-size: 130px; } }
   .logo__text_white {
     color: #fff;
-    font-family: sans-serif; }
+    font-family: "Proxima Nova Bl", sans-serif;
+    font-weight: 900; }
   .logo__text_black {
     color: #000;
-    font-family: sans-serif; }
+    font-family: "Proxima Nova Bl", sans-serif;
+    font-weight: 900; }
 
 .logo__descriptor {
   font-size: 48px;
-  font-family: sans-serif;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-weight: bold;
   color: #fff;
   text-transform: uppercase; }
   @media (max-width: 1440px) {
@@ -198,7 +246,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     font-size: 28px;
-    font-family: sans-serif;
+    font-family: "Proxima Nova Bl", sans-serif;
     color: #fff;
     text-transform: uppercase;
     margin: 0 20px 0 0; }
@@ -271,7 +319,8 @@ body {
     .services-descr__text {
       display: block;
       text-align: right;
-      font-family: sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
       font-size: 80px;
       text-transform: uppercase;
       font-style: italic; }
@@ -305,7 +354,7 @@ body {
 
 .clients-wrapper {
   width: 70vmin;
-  margin: 0 auto; }
+  margin: auto; }
 
 .clients-list {
   width: 100%;
@@ -381,7 +430,7 @@ body {
   .news-slide-title__text {
     font-size: 25px;
     color: #fff;
-    font-family: sans-serif; }
+    font-family: "Montserrat", sans-serif; }
     @media (max-width: 1440px) {
       .news-slide-title__text {
         font-size: 20px; } }
@@ -442,12 +491,24 @@ body {
     display: block;
     text-transform: lowercase;
     color: #fff;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 25px;
     margin: auto; }
     @media (max-width: 1440px) {
       .news-button-view__text {
         font-size: 20px; } }
+
+.news-navigation__link {
+  text-align: center; }
+
+.news-navigation-link {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none; }
+  .news-navigation-link__text {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: #204fff; }
 
 .lightning {
   position: absolute;
@@ -457,3 +518,79 @@ body {
   .lightning__img {
     width: 100%;
     display: block; }
+
+.map {
+  height: 50%;
+  width: 100%; }
+
+.contacts {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .contacts-address {
+    position: relative;
+    font-style: normal;
+    z-index: 1; }
+    .contacts-address__tel {
+      padding: 5px 0; }
+    .contacts-address__email {
+      padding: 5px 0; }
+    .contacts-address__soc-net {
+      padding: 20px 0; }
+  .contacts-tel__num {
+    font-size: 55px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none; }
+    @media (max-width: 1440px) {
+      .contacts-tel__num {
+        font-size: 36px; } }
+  .contacts-email__text {
+    font-size: 55px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none; }
+    @media (max-width: 1440px) {
+      .contacts-email__text {
+        font-size: 36px; } }
+
+.hand {
+  position: absolute;
+  height: 160%;
+  left: -50%;
+  bottom: 0;
+  z-index: 0; }
+  .hand__img {
+    width: auto;
+    height: 100%; }
+
+.soc-net-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .soc-net-list__item {
+    margin: 0 36px 0 0; }
+
+.soc-net-link {
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .soc-net-link__ico-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: 30px; }
+  .soc-net-link__ico {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; }

@@ -1,0 +1,12 @@
+.hand {
+  position: absolute;
+  height: 160%;
+  left: -50%;
+  bottom: 0;
+  z-index: 0;
+
+  &__img {
+    width: auto;
+    height: 100%;
+  }
+}
