@@ -2,10 +2,20 @@
 
   &-wrapper {
     position: relative;
-    //width: 550px;
-    width: 70vmin;
-    margin: 0 auto;
+    width: 750px;
+    margin: auto;
 
+    @media (max-width: 1900px) {
+      width: 700px;
+    }
+
+    @media (max-width: 1660px) {
+      width: 650px;
+    }
+
+    @media (max-width: 1420px) {
+      width: 520px;
+    }
   }
 
   &-list {
@@ -53,7 +63,7 @@
         color: #fff;
         font-family: $ff-MBold;
 
-        @media (max-width: 1440px) {
+        @media (max-width: 1660px) {
           font-size: 20px;
         }
       }
@@ -91,7 +101,7 @@
       z-index: 2;
       margin: auto;
 
-      @media (max-width: 1440px) {
+      @media (max-width: 1660px) {
         width: 60px;
         height: 60px;
       }
@@ -119,21 +129,35 @@
       font-size: 25px;
       margin: auto;
 
-      @media (max-width: 1440px) {
+      @media (max-width: 1660px) {
         font-size: 20px;
       }
     }
   }
 
   &-navigation {
+    position: relative;
+    padding: 50px 0;
+    z-index: 1;
+    text-align: center;
+
+    @media (max-width: 1660px) {
+      padding: 40px 0;
+    }
+
+    @media (max-width: 1420px) {
+      padding: 36px 0 0;
+    }
 
     &__link {
-      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      z-index: 2;
     }
 
     &-link {
-      display: inline-block;
-      vertical-align: top;
+      display: block;
       text-decoration: none;
 
       &__text {
@@ -147,9 +171,21 @@
 
 .lightning {
   position: absolute;
-  left: 71%;
-  top: 0;
-  width: 68vmin;
+  left: 80%;
+  top: -40px;
+  width: 520px;
+
+  @media (max-width: 1660px) {
+    left: 86%;
+    top: -22px;
+    width: 420px;
+  }
+
+  @media (max-width: 1420px) {
+    top: -36px;
+    left: 82%;
+    width: 350px;
+  }
 
   &__img {
     width: 100%;

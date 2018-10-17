@@ -1,0 +1,35 @@
+.news-slider-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  &__prev, &__next {
+    display: block;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__ico {
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -4,10 +4,21 @@
     display: block;
     font-size: 220px;
     text-transform: uppercase;
-    line-height: 120px;
+    line-height: 200px;
 
-    @media (max-width: 1440px) {
-      font-size: 130px;
+    @media (max-width: 1900px) {
+      font-size: 166px;
+      line-height: 154px;
+    }
+
+    @media (max-width: 1660px) {
+      font-size: 146px;
+      line-height: 134px;
+    }
+
+    @media (max-width: 1420px) {
+      font-size: 122px;
+      line-height: 112px;
     }
 
     &_white {
@@ -30,19 +41,35 @@
     color: #fff;
     text-transform: uppercase;
 
-    @media (max-width: 1440px) {
-      font-size: 26px;
+    @media (max-width: 1900px) {
+      font-size: 37px;
+    }
+
+    @media (max-width: 1660px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 1420px) {
+      font-size: 27px;
     }
   }
 
   &__shadow {
     position: absolute;
-    top: 0;
+    top: -8px;
     z-index: 0;
-    transform: rotate(-3deg);
+    transform: rotate(-5deg);
+
+    @media (max-width: 1660px) {
+      top: -4px;
+    }
 
     &_center {
-      left: 0;
+      left: -33px;
+
+      @media (max-width: 1660px) {
+        left: -20px;
+      }
     }
 
     &_left {

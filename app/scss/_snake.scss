@@ -1,21 +1,70 @@
 .snake {
   display: block;
-  width: 800px;
-  height: 100vh;
+  width: 1070px;
   position: absolute;
+  transition: .5s;
+
+  @media (max-width: 1900px) {
+    width: 960px;
+  }
+
+  @media (max-width: 1660px) {
+    width: 700px;
+  }
+
+  @media (max-width: 1420px) {
+    width: 590px;
+  }
 
   &_left {
-    top: 180px;
-    right: 83%;
+    top: 70px;
+    right: 82%;
 
-    @media (max-width: 1440px) {
-      top: 74px;
+    @media (max-width: 1900px) {
+      top: 60px;
+      right: 90%;
+    }
+
+    @media (max-width: 1420px) {
+      right: 97%;
     }
   }
 
   &_right {
     top: -40px;
     left: 100%;
+
+    @media (max-width: 1900px) {
+      top: -20px;
+    }
+
+    @media (max-width: 1420px) {
+      left: 107%;
+    }
+  }
+
+  &_descend-left {
+    top: 200px;
+
+    @media (max-width: 1660px) {
+      top: 220px;
+    }
+
+    @media (max-width: 1420px) {
+      top: 170px;
+    }
+  }
+
+  &_descend-right {
+    top: 90px;
+
+    @media (max-width: 1660px) {
+      top: 170px;
+    }
+
+    @media (max-width: 1420px) {
+      top: 130px;
+    }
   }
 
   &__img  {

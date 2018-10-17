@@ -1,10 +1,16 @@
 .clients {
 
   &-wrapper {
-    //width: 550px;
-    width: 70vmin;
+    width: 750px;
     margin: auto;
 
+    @media (max-width: 1660px) {
+      width: 650px;
+    }
+
+    @media (max-width: 1420px) {
+      width: 520px;
+    }
   }
 
   &-list {
@@ -17,6 +23,7 @@
   &-slide {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 50px;
 
     &__img-wrap {
       display: flex;
@@ -27,8 +34,8 @@
     }
 
     &__img {
-      max-width: 80%;
-      max-height: 80%;
+      max-width: 76%;
+      max-height: 76%;
     }
   }
 }

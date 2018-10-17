@@ -1,9 +1,22 @@
 .hand {
   position: absolute;
-  height: 160%;
-  left: -50%;
+  height: 114%;
+  left: -29%;
   bottom: 0;
   z-index: 0;
+
+  @media (max-width: 1900px) {
+    left: -26%;
+  }
+
+  @media (max-width: 1660px) {
+    height: 108%;
+    left: -20%;
+  }
+
+  @media (max-width: 1420px) {
+    left: -36%;
+  }
 
   &__img {
     width: auto;

@@ -37,6 +37,10 @@
     right: 0;
     bottom: -80px;
     z-index: 0;
+
+    @media (max-width: 1420px) {
+      bottom: -60px;
+    }
   }
 
   &-substrate {
@@ -57,19 +61,27 @@
     margin: auto;
     z-index: 1;
     left: -150px;
+
+    @media (max-width: 1660px) {
+      left: -100px;
+    }
   }
 
   &__hold {
     position: relative;
-    width: 977px;
+    width: 750px;
     margin: auto;
 
     &_contacts {
       height: 50%;
     }
 
-    @media (max-width: 1440px) {
-      width: 550px;
+    @media (max-width: 1660px) {
+      width: 650px;
+    }
+
+    @media (max-width: 1420px) {
+      width: 520px;
     }
   }
 
@@ -77,7 +89,27 @@
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 20px 0 40px;
+    padding: 20px 0 60px;
+
+    @media (max-width: 1900px) {
+      padding: 0 0 26px;
+    }
+
+    @media (max-width: 1420px) {
+      padding: 0 0 20px;
+    }
+
+    &_big {
+      padding: 20px 0 100px;
+
+      @media (max-width: 1660px) {
+        padding: 0 0 60px;
+      }
+
+      @media (max-width: 1420px) {
+        padding: 0 0 50px;
+      }
+    }
 
     &_right {
       justify-content: flex-end;
@@ -108,6 +140,19 @@
       font-family: $ff-MEBold;
       font-weight: bold;
       z-index: 1;
+      white-space: nowrap;
+
+      @media (max-width: 1900px) {
+        font-size: 56px;
+      }
+
+      @media (max-width: 1660px) {
+        font-size: 53px;
+      }
+
+      @media (max-width: 1420px) {
+        font-size: 48px;
+      }
       
       &_white {
         color: #fff;
@@ -117,15 +162,44 @@
     &__shadow {
       display: block;
       position: absolute;
-      left: 0;
-      top: 0;
+      width: 100%;
       color: $color-main;
       font-size: 60px;
       text-transform: uppercase;
       font-family: $ff-MEBold;
       font-weight: bold;
       z-index: 0;
-      transform: rotate(-3deg);
+      white-space: nowrap;
+
+      @media (max-width: 1900px) {
+        font-size: 56px;
+      }
+
+      @media (max-width: 1660px) {
+        font-size: 53px;
+      }
+
+      @media (max-width: 1420px) {
+        font-size: 48px;
+      }
+
+      &_clients {
+        left: 0;
+        top: 0;
+        transform: rotate(-3deg);
+      }
+
+      &_news {
+        left: 0px;
+        top: -2px;
+        transform: rotate(-2deg);
+      }
+
+      &_contacts {
+        left: 8px;
+        top: -2px;
+        transform: rotate(-2deg);
+      }
       
       &_black {
         color: #000;
@@ -134,11 +208,11 @@
 
     &__ico {
       display: block;
-      width: 320px;
+      width: 290px;
       height: 3px;
       background: $color-main;
 
-      @media screen and (max-width: 1440px) {
+      @media screen and (max-width: 1660px) {
         width: 222px;
       }
 
