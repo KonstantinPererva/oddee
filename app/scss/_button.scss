@@ -23,20 +23,26 @@
       height: 50px;
     }
 
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       cursor: pointer;
     }
 
     &:hover {
 
       & .button-send-brief__substrate {
-        width: 100%;
+
+        @media (min-width: 1200px) {
+          width: 100%;
+        }
       }
 
       & .button-send-brief__ico {
-        stroke-dasharray: 3px;
-        stroke: #000;
-        animation: dash .2s linear infinite;
+
+        @media (min-width: 1200px) {
+          stroke-dasharray: 3px;
+          stroke: #000;
+          animation: dash .2s linear infinite;
+        }
       }
     }
 

@@ -1,4 +1,8 @@
 .clients {
+  
+  &-slider {
+    position: relative;
+  }
 
   &-wrapper {
     width: 750px;
@@ -11,6 +15,14 @@
     @media (max-width: 1420px) {
       width: 520px;
     }
+
+    @media (max-width: 959px) {
+      width: 600px;
+    }
+
+    @media (max-width: 767px) {
+      width: 260px;
+    }
   }
 
   &-list {
@@ -21,16 +33,22 @@
   }
 
   &-slide {
-    display: flex;
+    //display: flex;
     flex-wrap: wrap;
-    padding: 0 50px;
+    padding: 0 10px;
 
     &__img-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 33.33%;
+      //width: 33.33%;
+      width: 100%;
       height: 15vmin;
+
+      @media (max-width: 767px) {
+        height: 25vmin;
+        padding: 10px 0;
+      }
     }
 
     &__img {

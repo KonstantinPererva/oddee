@@ -49,6 +49,31 @@
     height: 100%;
     background: url(../images/bg/greed-lg.png) no-repeat center bottom;
     background-size: cover;
+
+    @media screen and (max-width: 1440px) {
+      background: url(../images/bg/greed-lg-1440.png) no-repeat center bottom;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 1280px) {
+      background: url(../images/bg/greed-lg-1280.png) no-repeat center bottom;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 1024px) {
+      background: url(../images/bg/greed-md-1024.png) no-repeat center bottom;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 959px) {
+      background: url(../images/bg/greed-sm-768.png) no-repeat center bottom;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 767px) {
+      background: url(../images/bg/greed-sm-768.png) no-repeat right bottom;
+      background-size: cover;
+    }
   }
 
   &__block {
@@ -64,6 +89,10 @@
 
     @media (max-width: 1660px) {
       left: -100px;
+    }
+
+    @media (max-width: 1280px) {
+      left: 0;
     }
   }
 
@@ -83,6 +112,18 @@
     @media (max-width: 1420px) {
       width: 520px;
     }
+
+    @media (max-width: 959px) {
+      width: 460px;
+    }
+
+    @media (max-width: 767px) {
+      width: 320px;
+    }
+
+    @media (max-width: 360px) {
+      width: 280px;
+    }
   }
 
   &-title {
@@ -99,6 +140,14 @@
       padding: 0 0 20px;
     }
 
+    @media (max-width: 1200px) {
+      padding: 0 0 60px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0 0 20px;
+    }
+
     &_big {
       padding: 20px 0 100px;
 
@@ -109,10 +158,18 @@
       @media (max-width: 1420px) {
         padding: 0 0 50px;
       }
+
+      @media (max-width: 767px) {
+        padding: 0 0 30px;
+      }
     }
 
     &_right {
       justify-content: flex-end;
+
+      @media screen and (max-width: 767px) {
+        justify-content: center;
+      }
 
       & .section-title__ico {
         margin-right: 55px;
@@ -139,7 +196,7 @@
       text-transform: uppercase;
       font-family: $ff-MEBold;
       font-weight: bold;
-      z-index: 1;
+      z-index: 2;
       white-space: nowrap;
 
       @media (max-width: 1900px) {
@@ -152,6 +209,14 @@
 
       @media (max-width: 1420px) {
         font-size: 48px;
+      }
+
+      @media (max-width: 959px) {
+        font-size: 42px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 38px;
       }
       
       &_white {
@@ -168,7 +233,7 @@
       text-transform: uppercase;
       font-family: $ff-MEBold;
       font-weight: bold;
-      z-index: 0;
+      z-index: 1;
       white-space: nowrap;
 
       @media (max-width: 1900px) {
@@ -181,6 +246,14 @@
 
       @media (max-width: 1420px) {
         font-size: 48px;
+      }
+
+      @media (max-width: 959px) {
+        font-size: 42px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 38px;
       }
 
       &_clients {
@@ -216,10 +289,21 @@
         width: 222px;
       }
 
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
       &_white {
         background: #fff;
       }
     }
+  }
+}
+
+.hidden-xs {
+
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
 

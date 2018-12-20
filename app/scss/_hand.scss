@@ -18,6 +18,15 @@
     left: -36%;
   }
 
+  @media (max-width: 959px) {
+    height: 110%;
+  }
+
+  @media (max-width: 959px) {
+    height: 106%;
+    left: -40%;
+  }
+
   &__img {
     width: auto;
     height: 100%;

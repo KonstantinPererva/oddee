@@ -6,6 +6,19 @@
   bottom: 0;
   left: 10%;
   z-index: 100;
+  user-select: none;
+
+  @media (max-width: 959px) {
+    left: 5%;
+  }
+
+  @media (max-width: 767px) {
+    left: 2%;
+  }
+
+  @media (max-width: 375px) {
+    left: -5px;
+  }
 
   &__hold {
     display: block;
@@ -36,6 +49,10 @@
       opacity: 1;
       margin: 20px 0;
       will-change: transform;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     & .swiper-pagination-bullet.swiper-pagination-bullet-active {

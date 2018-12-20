@@ -7,10 +7,35 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 959px) {
+    left: 20px;
+  }
+
+  @media (max-width: 767px) {
+    left: 0;
+  }
+
   &-address {
     position: relative;
     font-style: normal;
     z-index: 1;
+
+    @media (max-width: 1024px) {
+      width: 440px;
+      margin: 0 auto;
+      position: relative;
+      left: 76px;
+    }
+
+    @media (max-width: 959px) {
+      left: 110px;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      left: 0;
+      text-align: center;
+    }
 
     &__tel {
       padding: 5px 0;
@@ -45,6 +70,14 @@
       @media (max-width: 1420px) {
         font-size: 32px;
       }
+
+      @media (max-width: 959px) {
+        font-size: 27px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
     }
   }
 
@@ -67,6 +100,14 @@
 
       @media (max-width: 1420px) {
         font-size: 32px;
+      }
+
+      @media (max-width: 959px) {
+        font-size: 27px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 24px;
       }
     }
   }

@@ -7,6 +7,14 @@
   width: 100%;
   height: 100%;
 
+  @media screen and (max-width: 767px) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 0;
+  }
+
   &__prev, &__next {
     display: block;
     width: 31px;
@@ -17,18 +25,42 @@
     margin: auto;
     cursor: pointer;
     z-index: 3;
+    outline: none;
+    user-select: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      position: static;
+      margin: 0 20px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1f4fff;
+    }
   }
 
   &__prev {
-    left: 0;
+    left: -31px;
   }
 
   &__next {
-    right: 0;
+    right: -31px;
   }
 
   &__ico {
     display: block;
     margin: 0 auto;
+
+    & path {
+
+      @media screen and (max-width: 767px) {
+        fill: #fff;
+      }
+    }
   }
 }

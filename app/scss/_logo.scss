@@ -21,6 +21,16 @@
       line-height: 112px;
     }
 
+    @media (max-width: 959px) {
+      font-size: 137px;
+      line-height: 130px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 56px;
+      line-height: 56px;
+    }
+
     &_white {
       color: #fff;
       font-family: $ff-PNBlack;
@@ -64,20 +74,36 @@
       top: -4px;
     }
 
+    @media (max-width: 767px) {
+      top: 0;
+    }
+
     &_center {
       left: -33px;
 
       @media (max-width: 1660px) {
         left: -20px;
       }
+
+      @media (max-width: 767px) {
+        left: -13px;
+      }
     }
 
     &_left {
       right: 120%;
+
+      @media (max-width: 767px) {
+        right: 115%;
+      }
     }
 
     &_right {
       left: 120%;
+
+      @media (max-width: 767px) {
+        left: 115%;
+      }
     }
   }
 

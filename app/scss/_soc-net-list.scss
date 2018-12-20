@@ -4,7 +4,19 @@
   margin: 0;
   padding: 0;
 
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
   &__item {
     margin: 0 36px 0 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 30px 0 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }

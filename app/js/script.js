@@ -1,10 +1,19 @@
 window.addEventListener("DOMContentLoaded", function () {
+    var section = document.querySelectorAll('.section');
+    // var slides = [];
+    //
+    // Array.prototype.forEach.call(section, function (el) {
+    //     slides.push(el);
+    //     console.log(slides);
+    // });
+
     var swiper = new Swiper('.page-container', {
+        longSwipesRatio: 0.1,
+        nested: true,
         speed: 600,
         direction: 'vertical',
         slidesPerView: 1,
         preventClicks: true,
-        resistance: false,
         observer: true,
         mousewheel: true,
         resistanceRatio: 0,
@@ -17,22 +26,48 @@ window.addEventListener("DOMContentLoaded", function () {
 
     var swiperClients = new Swiper('.clients', {
         speed: 700,
-        slidesPerView: 1,
+        slidesPerView: 3,
         loop: true,
         navigation: {
             nextEl: '.clients-slider-arrow__next',
             prevEl: '.clients-slider-arrow__prev',
+        },
+        breakpoints: {
+            767: {
+                speed: 700,
+                loop:true,
+                slidesPerView: 1
+            }
         }
     });
 
+    var effectSlider = undefined;
+
+    if (window.innerWidth < 768) {
+        effectSlider = 'cube';
+    }
+
     var swiperNews = new Swiper('.news', {
         speed: 700,
-        loop:true,
+        effect: effectSlider,
+        loop: true,
         slidesPerView: 3,
         spaceBetween: 6,
         navigation: {
             nextEl: '.news-slider-arrow__next',
             prevEl: '.news-slider-arrow__prev'
+        },
+        breakpoints: {
+            767: {
+                speed: 700,
+                loop:true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                cubeEffect: {
+                    shadow: false,
+                    slideShadows: false
+                }
+            }
         }
     });
 
@@ -43,6 +78,7 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector('#map').addEventListener('mouseleave', function () {
         swiper.mousewheel.enable();
     });
+
     var paginationContainer = document.querySelector('.page-pagination__hold');
     var snakes = document.querySelectorAll('.snake');
 
@@ -134,13 +170,15 @@ function initMap() {
         {featureType: "water",
             elementType: "labels.text.fill",stylers: [{color: colorText}]}
     ];
-    var center = {lat: 50.43856022, lng: 30.53900178};
+    var center = {lat: 50.44, lng: 30.53900178};
+    var markerPosition = {lat: 50.43856022, lng: 30.53900178};
     var titleString = 'ODDEE agency';
     var markerIcon = 'images/marker.svg';
-    var mobMap = 'auto';
+    var ZoomMap = 'cooperative';
 
-    if (window.innerWidth <= 768) {
-        mobMap = 'cooperative';
+    if (window.innerWidth < 768) {
+        markerIcon = 'images/marker-mob.svg';
+        center = {lat: 50.43856022, lng: 30.53900178};
     }
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -148,29 +186,29 @@ function initMap() {
         zoom: 15,
         styles: styleBlackAndWhite,
         disableDefaultUI: true,
-        gestureHandling: mobMap,
+        gestureHandling: ZoomMap,
         mapTypeControl: false
     });
 
     var marker = new google.maps.Marker({
-        position: center,
+        position: markerPosition,
         map: map,
         title: titleString,
         icon: markerIcon
     });
 
-    var contentString = '<div style="font-size:14px;font-weight:bold;padding:0 0 10px">#ODDEE agency</div>' +
-        '<div>Киев 02000</div>' +
-        '<div>Кловский спуск, 7</div>' +
-        '<div>044 339 9835</div>';
-
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
-
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
-    });
+    // var contentString = '<div style="font-size:14px;font-weight:bold;padding:0 0 10px">#ODDEE agency</div>' +
+    //     '<div>Киев 02000</div>' +
+    //     '<div>Кловский спуск, 7</div>' +
+    //     '<div>044 339 9835</div>';
+    //
+    // var infowindow = new google.maps.InfoWindow({
+    //     content: contentString
+    // });
+    //
+    // marker.addListener('click', function() {
+    //     infowindow.open(map, marker);
+    // });
 
 
     var openMap = function () {
